@@ -56,10 +56,9 @@ $(document).ready(function(){
 		var tracks = playlist.find('li a');
 		var current_track=0;
 		var track_len = tracks.length;
-
-		init();
+		// flag = "sec";
 		
-		function init(){
+		init_audio = function(){
 		    // current = 0;
 		    // audio = $('#bday-audio');
 		    // playlist = $('#playlist');
@@ -117,7 +116,6 @@ $(document).ready(function(){
 	});
 
 	function enter_site(){
-	
 	jQuery("#skip-anim").fadeOut();
 	jQuery("#os-phrases").fadeOut();
 	jQuery(".os-loader").delay(1000).fadeOut("fast");
@@ -126,6 +124,7 @@ $(document).ready(function(){
 	jQuery(".char1").fadeIn("fast");
 
 	$("#intro-music").trigger('pause');
+	init_audio();
 	jQuery(".char2").delay(2000).fadeIn("fast");
 	jQuery(".char3").delay(2020).fadeIn("fast");
 	jQuery(".char4").delay(2040).fadeIn("fast");
