@@ -118,9 +118,9 @@
 				<img class="char-image" src="images/14.jpg">
 			</div>
 			<div style="position:fixed;">
-				<audio id="bday-audio" preload="auto" tabindex="0" type="audio/mpeg">
-				    <source type="audio/mp3" src="http://www.archive.org/download/bolero_69/Bolero.mp3">
-				    Sorry, your browser does not support HTML5 audio.
+				<audio id="bday-audio" preload="auto" tabindex="0" type="audio/mpeg" onended="track_ended();">
+				    <source type="audio/mp3" src="audio/1.mp3">
+				    <!-- Sorry, your browser does not support HTML5 audio. -->
 				</audio>
 				<ul id="playlist" style="display:none;">
 				    <li class="active"><a href="audio/1.mp3" title="New World">1</a></li>
