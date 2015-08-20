@@ -143,6 +143,57 @@ html{
 	
 }
 
+#skip-bgvid{
+	font-family: ryan;
+	font-weight: 600;
+	position:absolute; 
+	right:20px; 
+	top:15px; 
+	color:#fff; 
+	/*border:1px solid white; */
+	/*border-radius:4px; */
+	/*padding: 5px 15px;*/
+	padding-right: 5px;
+	font-size: 25px;
+	cursor: pointer;
+	/*background: rgba(0,0,0,0.3);*/
+	-webkit-user-select: none;  
+	  -moz-user-select: none;    
+	  -ms-user-select: none;      
+	  user-select: none;
+
+
+}
+
+#skip-bgvid:hover{
+	cursor:pointer; 
+	
+}
+
+#status-bgvid{
+	font-family: ryan;
+	font-weight: 600;
+	position:absolute; 
+	right:65px; 
+	top:15px; 
+	color:#fff; 
+	/*border:1px solid white; 
+	border-radius:4px; 
+	padding: 5px 15px;*/
+	padding-right: 5px;
+	font-size: 25px;
+	cursor: pointer;
+	/*background: rgba(0,0,0,0.3);*/
+	-webkit-user-select: none;  
+	  -moz-user-select: none;    
+	  -ms-user-select: none;      
+	  user-select: none;
+}
+
+#status-bgvid:hover{
+	cursor: pointer;
+}
+
 #enter-site-btn :hover{
 	cursor:pointer; 
 	text-decoration:underline;
@@ -172,16 +223,27 @@ html{
 
 /*Video Bg*/
 
-#bgvid { 
-    position: fixed;
+#bgvid-div{
+	position: fixed;
     top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -100;
+    z-index: 0;
     transform: translateX(-50%) translateY(-50%);
+}
+
+
+#bgvid { 
+    position: absolute;
+    top:0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
  	background: url('http://demosthenes.info/assets/images/polina.jpg') no-repeat;
   	background-size: cover;
   	transition: 1s opacity;
@@ -243,3 +305,45 @@ html{
   html { background: url(//demosthenes.info/assets/images/polina.jpg) #000 no-repeat center center fixed; }
   #bgvid { display: none; }
 }*/
+
+#butterfly{ 
+	position: absolute; 
+	left: 0; 
+	top: 0; 
+	width:0%;
+	height: 100%;
+	background: red;
+	z-index: 5;
+	transition: all 0.3s linear;
+} 
+#progressbar{ 
+	z-index: 10;
+	opacity: 100%;
+	display: ; 
+	width: 100%; 
+	height: 6px; 
+	position: absolute; 
+	bottom:0;
+	left:0;
+	cursor: pointer;
+	/* background color */ 
+	opacity:0.5; 
+	
+} 
+#progressbar :hover{ 
+	cursor: pointer;
+}
+#loadingprogress{ 
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0%;
+	background: #fff;
+	opacity: 0.9;
+	z-index: 3;
+	transition: all 0.5s ease-in;
+	cursor: pointer;	
+}
+
+

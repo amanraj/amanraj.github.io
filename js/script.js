@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 		openingSequence();
-		backgroundVideoPlayer();
 		onHoverRotate();
 		// openingSequencePlayer();
 		allImagesHovered = 0;
@@ -72,38 +71,6 @@ function run(link, player){
 
 
 
-
-
-function backgroundVideoPlayer(){
-	// var vid = document.getElementById("bgvid");
-	var vid = $("#bgvid")[0];
-	var pauseButton = document.querySelector("#polina button");
-
-	function vidFade() {
-	  vid.classList.add("stopfade");
-	}
-
-	vid.addEventListener('ended', function(){
-		// only functional if "loop" is removed 
-		vid.pause();
-		// to capture IE10
-		vidFade();
-		enter_site();
-	}); 
-
-
-	pauseButton.addEventListener("click", function() {
-	  vid.classList.toggle("stopfade");
-	  if (vid.paused) {
-	    vid.play();
-	    pauseButton.innerHTML = "Pause";
-	  } else {
-	    vid.pause();
-	    pauseButton.innerHTML = "Paused";
-	  }
-	})
-
-}
 
 function openingSequencePlayer(){
 	var aud = document.getElementById("intro-music");
